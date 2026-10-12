@@ -1,0 +1,429 @@
+
+/* ==========================================
+   WEBSITE AZKA - PREMIUM BLUE EDITION
+   Rounded UI | Deep Shadow | Smooth Motion
+   ========================================== */
+
+:root {
+    --green-dark: #102A56;
+    --green-main: #2563EB;
+    --green-light: #60A5FA;
+    --green-pale: #EFF6FF;
+    --text-main: #20304A;
+    --text-muted: #64748B;
+    --white: #FFFFFF;
+    --border: #DBEAFE;
+    --shadow-main: 0 25px 65px rgba(15, 40, 100, 0.28);
+    --shadow-card: 0 8px 24px rgba(37, 99, 235, 0.09);
+    --shadow-hover: 0 15px 32px rgba(37, 99, 235, 0.22);
+}
+
+/* RESET DAN DASAR */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 45px 16px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text-main);
+    line-height: 1.75;
+
+    background-color: #E8F0FC;
+    background-image:
+        radial-gradient(
+            ellipse at 10% 10%,
+            rgba(96, 165, 250, 0.25),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 90% 85%,
+            rgba(30, 64, 175, 0.20),
+            transparent 40%
+        );
+
+    background-attachment: fixed;
+}
+
+/* ANIMASI KEMUNCULAN WEBSITE */
+@keyframes websiteEnter {
+    from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.985);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(96, 165, 250, 0.10);
+    }
+    50% {
+        box-shadow: 0 0 27px rgba(96, 165, 250, 0.28);
+    }
+}
+
+/* TABEL UTAMA */
+body > table {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 24px;
+    overflow: hidden;
+
+    background: var(--white);
+    box-shadow:
+        0 3px 0 rgba(255, 255, 255, 0.85),
+        0 12px 25px rgba(0, 0, 0, 0.08),
+        var(--shadow-main),
+        0 0 0 8px rgba(255, 255, 255, 0.12);
+
+    animation: websiteEnter 0.8s ease-out both;
+    transition: box-shadow 0.35s ease;
+}
+
+body > table:hover {
+    box-shadow:
+        0 3px 0 rgba(255, 255, 255, 0.9),
+        0 18px 35px rgba(0, 0, 0, 0.10),
+        0 30px 75px rgba(15, 40, 100, 0.32),
+        0 0 0 8px rgba(255, 255, 255, 0.16);
+}
+
+/* SEMUA SEL TABEL */
+body > table td {
+    padding: 18px;
+    border: none;
+}
+
+/* HEADER */
+body > table tr:first-child td {
+    padding: 32px 18px;
+    color: white;
+
+    background-color: var(--green-dark);
+    background-image:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(96, 165, 250, 0.28),
+            transparent 38%
+        ),
+        linear-gradient(
+            125deg,
+            #102A56 0%,
+            #2563EB 48%,
+            #0F4C81 100%
+        );
+
+    border-bottom: 4px solid var(--green-light);
+    position: relative;
+    overflow: hidden;
+}
+
+body > table tr:first-child h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+body > table tr:first-child em {
+    color: #DBEAFE;
+    letter-spacing: 0.4px;
+}
+
+/* NAVIGASI */
+body > table tr:nth-child(2) td {
+    padding: 15px 18px;
+    background: #F8FAFF;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.025);
+}
+
+body > table tr:nth-child(2) a {
+    display: inline-block;
+    margin: 4px 3px;
+    padding: 8px 13px;
+
+    color: var(--green-dark);
+    background: transparent;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+body > table tr:nth-child(2) a:hover {
+    color: white;
+    background: linear-gradient(
+        135deg,
+        var(--green-main),
+        var(--green-dark)
+    );
+    border-color: rgba(96, 165, 250, 0.45);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+    transform: translateY(-3px);
+}
+
+body > table tr:nth-child(2) a:active {
+    transform: translateY(1px) scale(0.95);
+    box-shadow: 0 2px 5px rgba(37, 99, 235, 0.18);
+}
+
+/* KONTEN ARTIKEL */
+body > table tr:nth-child(3) td:first-child {
+    padding: 26px;
+    vertical-align: top;
+    background: #FFFFFF;
+}
+
+body > table tr:nth-child(3) h3 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    padding-left: 13px;
+
+    color: var(--green-dark);
+    font-size: 21px;
+    line-height: 1.5;
+
+    border-left: 4px solid var(--green-light);
+    border-radius: 3px;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+body > table tr:nth-child(3) h3:hover {
+    color: var(--green-main);
+    padding-left: 18px;
+}
+
+body > table tr:nth-child(3) p {
+    margin-top: 13px;
+    margin-bottom: 16px;
+}
+
+/* TANGGAL ARTIKEL */
+body > table tr:nth-child(3) small {
+    color: var(--text-muted);
+}
+
+/* GARIS PEMISAH */
+body > table hr {
+    height: 2px;
+    margin: 28px 0;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        var(--green-light),
+        #DBEAFE,
+        transparent
+    );
+}
+
+/* SIDEBAR KONTAK */
+body > table tr:nth-child(3) td[bgcolor="lightgrey"] {
+    background: linear-gradient(
+        160deg,
+        #EFF6FF,
+        #DBEAFE
+    );
+
+    border-left: 1px solid #BFDBFE;
+    overflow-wrap: anywhere;
+}
+
+body > table tr:nth-child(3) td[bgcolor="lightgrey"] > p {
+    margin-top: 0;
+    padding-bottom: 10px;
+
+    color: var(--green-dark);
+    font-size: 18px;
+    font-weight: 800;
+
+    border-bottom: 2px solid #93C5FD;
+}
+
+/* DAFTAR KONTAK */
+body > table ol {
+    padding-left: 22px;
+}
+
+body > table ol li {
+    padding: 5px 0;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+body > table ol li:hover {
+    color: var(--green-main);
+    transform: translateX(4px);
+}
+
+body > table ol li::marker {
+    color: var(--green-main);
+    font-weight: 700;
+}
+
+/* TAUTAN UMUM */
+body > table a {
+    color: var(--green-main);
+    text-underline-offset: 4px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+body > table a:hover {
+    color: #1D4ED8;
+}
+
+/* TAUTAN SELANJUTNYA */
+body > table tr:nth-child(3) td:first-child p a {
+    display: inline-block;
+    padding: 7px 13px;
+
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #3B82F6,
+        #102A56
+    );
+
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 700;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        filter 0.22s ease;
+}
+
+body > table tr:nth-child(3) td:first-child p a:hover {
+    color: white;
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+body > table tr:nth-child(3) td:first-child p a:active {
+    transform: scale(0.94);
+    box-shadow: 0 2px 5px rgba(37, 99, 235, 0.18);
+}
+
+/* FOOTER */
+body > table tr:last-child td {
+    padding: 17px 20px;
+
+    color: white;
+    background: linear-gradient(
+        110deg,
+        #0F172A,
+        #102A56,
+        #0F172A
+    );
+
+    border-top: 3px solid var(--green-light);
+    box-shadow: inset 0 5px 12px rgba(0, 0, 0, 0.10);
+}
+
+body > table tr:last-child small {
+    color: #DBEAFE;
+}
+
+/* FOKUS KEYBOARD */
+body > table a:focus-visible {
+    outline: 3px solid #60A5FA;
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 8px;
+    }
+
+    body > table {
+        width: 100%;
+        border-radius: 18px;
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.12),
+            0 20px 45px rgba(15, 40, 100, 0.22);
+    }
+
+    body > table td {
+        padding: 12px;
+    }
+
+    body > table tr:first-child td {
+        padding: 24px 12px;
+    }
+
+    body > table tr:first-child h1 {
+        font-size: 28px;
+    }
+
+    body > table tr:nth-child(2) td {
+        padding: 10px;
+    }
+
+    body > table tr:nth-child(2) a {
+        margin: 3px 1px;
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+
+    body > table tr:nth-child(3) td:first-child {
+        padding: 16px;
+    }
+
+    body > table tr:nth-child(3) h3 {
+        font-size: 18px;
+    }
+
+    body > table tr:nth-child(3) td[bgcolor="lightgrey"] {
+        padding: 13px;
+    }
+}
+
+/* HORMATI PENGATURAN ANIMASI PENGGUNA */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
